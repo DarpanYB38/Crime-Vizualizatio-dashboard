@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Crime Visualization Dashboard | For crime Analysis </title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../static/styles.css">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body class="min-h-screen flex flex-col items-center justify-center px-4 py-10">
+
+  <!-- Navigation Buttons -->
+  <div class="flex space-x-4 absolute top-5 right-5">
+    <a href="dashboard" class="nav-btn px-4 py-2 bg-gray-800 rounded-lg text-sm font-semibold">Dashboard</a>
+    <a href="similarity-search" class="nav-btn px-4 py-2 bg-gray-800 rounded-lg text-sm font-semibold">Crime Similarity</a>
+    <a href="crime-trends" class="nav-btn px-4 py-2 bg-gray-800 rounded-lg text-sm font-semibold">Crime Trends</a>
+  </div>
+
+  <!-- Main Content -->
+  <div class="glass p-10 rounded-2xl max-w-4xl text-center mt-20">
+    <h1 class="text-5xl font-bold mb-6 text-cyan-400 pulse">Crime Visualization</h1>
+    <p class="text-lg text-gray-300 mb-10">
+      Empowering authorities and citizens with real-time crime insights.<br>
+      Explore crime trends, predict patterns, and stay informed.
+    </p>
+
+    <div class="flex flex-wrap justify-center gap-6">
+      <a href="{% url 'crime_map' %}" class="nav-btn bg-cyan-700 px-6 py-3 rounded-xl text-white shadow-xl">📍 View Map</a>
+      <a href="{% url 'heatmap' %}" class="nav-btn bg-cyan-700 px-6 py-3 rounded-xl text-white shadow-xl">🌡Heat Maps</a>
+      <a href="{% url 'predict_crime' %}" class="nav-btn bg-cyan-700 px-6 py-3 rounded-xl text-white shadow-xl">🧠 Predict Crime</a>
+    </div>
+  </div>
+  <!-- Footer -->
+  <footer class="mt-20 text-sm text-gray-500">
+    © 2025 Crime Visualization — Built with ❤️ using Django
+  </footer>
+
+</body>
+</html>
